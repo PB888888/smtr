@@ -1,6 +1,6 @@
 ---
 name: dm-funnel
-description: Process unread Facebook Messenger and Instagram Direct threads for Paddock Blade into a numbered approval queue that Jake can action with a single message like "1, 3, 5 yes". Use whenever working through Paddock Blade's DM inbox, triaging unread messages, building the daily DM review queue, or when asked what is waiting in DMs. Handles Meta's 24-hour messaging window and orders the queue so threads about to become unanswerable come first. Always checked against escalation-rules before anything is drafted.
+description: Process unread Facebook Messenger, Instagram Direct, website chat and Shopify Inbox threads for Paddock Blade into a numbered approval queue that Jake can action with a single message like "1, 3, 5 yes". Use whenever working through any Paddock Blade conversational inbox, triaging unread messages, building the daily DM review queue, or when asked what is waiting in DMs. Handles Meta's 24-hour messaging window (which applies to Messenger and Instagram only) and orders the queue so threads about to become unanswerable come first. Always checked against escalation-rules before anything is drafted.
 ---
 
 # DM funnel
@@ -104,6 +104,21 @@ comfortable today. And `HUMAN_AGENT` is not a workaround — Meta detects misuse
 using it on promotional content or on a bot-composed message risks the Page's
 messaging access. It exists for exactly the case this queue creates: a real person
 deciding, a little late.
+
+## Only Meta channels have a window
+
+The 24-hour and 7-day rules are **Meta platform policy**, and they apply to
+Facebook Messenger and Instagram Direct only. **Website chat and Shopify Inbox have
+no such constraint** — you can reply whenever, and there is no tag to apply.
+
+Worth stating plainly because the mistake runs in both directions. Do not apply
+`HUMAN_AGENT` reasoning to a Shopify Inbox thread, where it is meaningless. And do
+not assume a website chat that has gone quiet for three days is closed — it is not.
+
+Set `window: n/a` for non-Meta threads and sort them by age, since that is all the
+urgency signal available. They still belong in the same queue: the customer does not
+care which pipe their question came down, and splitting the queue by channel just
+means two things to check.
 
 ## Do not open conversations
 

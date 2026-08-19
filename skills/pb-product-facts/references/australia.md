@@ -1,63 +1,92 @@
-# Australia — AUD (A$)
+# Australia and New Zealand — AUD (A$)
 
-Region file for `pb-product-facts`. Read this one when the customer is in
-Australia; do not generalise from another market.
-
+- **Store:** paddockblade.com.au
 - **Currency:** AUD, written `A$`
 - **Language:** British English
-- **Tax:** GST
+- **Tax:** GST — normally included in the displayed price
 
-> **Every figure below is a `TODO(jake):` placeholder.** Until filled in, questions
-> about price, delivery or warranty for this market escalate. See the rule in
-> `../SKILL.md`.
+> ## ⚠️ Pricing and availability for this market are NOT verified
+>
+> I could not reach this market's data. The Shopify connector authorises **one
+> store at a time** and is currently connected to the UK; switching revokes that
+> access and needs an interactive login that could not be completed. All five
+> regional websites are blocked by this environment's network policy.
+>
+> So the prices, stock and product list below are **absent, not summarised** — and
+> **UK figures must never be reused here.** A UK price shown to a customer in this
+> market is the exact error the country-separation rule exists to prevent.
+>
+> Until this is filled in, price, delivery and availability questions from this
+> market **escalate**. What follows is only what Paddock Blade's own global
+> documents state, with each item's source named.
 
-## Pricing
+## What the global documents say about this market
 
-| Product | Price (AUD) | Tax shown? |
-| --- | --- | --- |
-| Paddock blade — per model | > **TODO(jake):** one row per model, using the exact store name | > **TODO(jake):** is the displayed price GST-inclusive or exclusive? |
-| Horse solarium | > **TODO(jake):** | |
-| e-Barrow | > **TODO(jake):** | |
-| Tack lockers | > **TODO(jake):** per size | |
-| Spare parts | > **TODO(jake):** or a pointer to where a customer sees part prices | |
+Business Bible §11.4 describes Australia as **hero-product-led** — core SKU
+leadership, dealer and distributor development, and strong local manufacturing and
+support messaging, with product-market-fit validation before broad category
+expansion.
 
-> **TODO(jake):** the store URL for this market, so replies can point customers to
-> the right one. Sending a Australia customer to the wrong store is a common own goal —
-> they see the wrong currency and often the wrong shipping.
+It does **not** enumerate an Australian category list, unlike the UK, US, Canada
+and Europe sections. So even the strategic picture is thinner here.
 
-Never convert from another market's price. Rates move, and a quoted conversion
-reads as a promise.
+## Product specifications
 
-## Shipping
+The Original Paddock Blade's specifications in `original-paddock-blade.md` are
+**not market-specific** and apply here: weight, towing requirements, speed,
+surfaces, capacity, warranty terms, troubleshooting. Those were safe to record
+globally because the FAQ states them globally.
 
-| Field | Value |
-| --- | --- |
-| Delivery time | > **TODO(jake):** working days, and say whether that is dispatch-to-door or order-to-door |
-| Shipping cost | > **TODO(jake):** including any free-shipping threshold |
-| Areas served / surcharges | > **TODO(jake):** Metro versus regional and remote differs substantially here. WA and NT especially. |
-| Carrier and tracking | > **TODO(jake):** who delivers, whether tracking is provided |
-| Larger items | > **TODO(jake):** do solarium / e-Barrow / lockers ship differently from blades? Kerbside or to-door? |
-| Current lead time | > **TODO(jake):** if any line is made to order or on backorder, note it — this changes the answer and goes stale, so it needs reviewing rather than being written once |
+What is **not** safe to carry across markets: price, delivery, stock, availability,
+product naming, and country of manufacture.
+
+## Payment
+
+All major credit and debit cards, bank transfer, **AfterPay**, **ZipPay**, **PayPal Pay in 4**.
+
+https://www.afterpay.com/ · https://zip.co/
+
+*Source: FAQ, payment plans row.*
+
+## Delivery
+
+> **TODO(jake):** no delivery information for this market exists in any source
+> available here. Free-shipping thresholds, lead times, carriers, and which areas
+> carry a surcharge are all unknown.
 
 ## Warranty and returns
 
-| Field | Value |
-| --- | --- |
-| Warranty length | > **TODO(jake):** per product line, if they differ |
-| What it covers | > **TODO(jake):** and what it excludes — wear parts, misuse, commercial use |
-| How to claim | > **TODO(jake):** the process a customer follows |
-| Returns window | > **TODO(jake):** |
-| Return shipping | > **TODO(jake):** who pays, and whether that differs for a faulty item versus a change of mind |
-| Statutory rights | Australian Consumer Law, including statutory consumer guarantees, which cannot be excluded. |
+- Warranty: the 10-year position in `original-paddock-blade.md` is stated globally
+  and applies. Warranty questions still escalate.
+- Returns policy: https://paddockblade.com.au/policies/refund-policy
+- Statutory rights: Australian Consumer Law, including statutory consumer guarantees that cannot be excluded by a warranty.
 
-> **A reminder.** Warranty and refund questions match `escalation-rules` rules 3
-> and 7 and escalate regardless of what is written here. This section exists so
-> Jake has the facts to hand and so drafts can be accurate — not so a warranty
-> question can be answered without him. Consumer law differs enough between these
-> five markets that a statement correct in one is wrong in another.
+## Links
 
-## Anything specific to this market
+- Paddock Cleaning Calculator: https://paddockblade.com.au/pages/paddock-cleaning-calculator
+- Store: https://paddockblade.com.au
 
-> **TODO(jake):** anything a Australia customer asks that customers elsewhere do not —
-> local regulations, voltage and plug type for the solarium, import duty, seasonal
-> demand, terminology quirks. Worth adding to as patterns show up in the digests.
+## New Zealand
+
+The FAQ lists New Zealand among the markets sold to, and the Paddock Blade has been
+tested there for 10 years. NZ appears to be served through the `.com.au` store.
+
+> **TODO(jake):** confirm NZ is served via the AU store, and whether NZ customers
+> see AUD or NZD, what shipping applies across the Tasman, and whether NZ consumer
+> law (the Consumer Guarantees Act) changes the warranty wording. Until confirmed,
+> treat an NZ enquiry as its own case and escalate anything about price, freight or
+> warranty.
+
+Do not tell an NZ customer they are buying from the Australian store as though that
+is certain, and do not quote AUD to them as though it is their currency.
+
+## Terminology
+
+"Paddock" is the natural word here and needs no translation from UK usage. A
+trailer is a **float**. Otherwise UK vocabulary applies — see `pb-brand-voice`.
+
+## Statutory guarantees
+
+Australian Consumer Law guarantees sit *alongside* the 10-year warranty and cannot
+be contracted out of. This makes any AU warranty or refund conversation a hard
+escalation — `escalation-rules` rules 3 and 7.

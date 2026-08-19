@@ -1,63 +1,96 @@
 # Europe — EUR (€)
 
-Region file for `pb-product-facts`. Read this one when the customer is in
-Europe; do not generalise from another market.
-
+- **Store:** paddockblade.nl
 - **Currency:** EUR, written `€`
 - **Language:** British English for English-language replies
-- **Tax:** VAT
+- **Tax:** VAT — implemented per member state
 
-> **Every figure below is a `TODO(jake):` placeholder.** Until filled in, questions
-> about price, delivery or warranty for this market escalate. See the rule in
-> `../SKILL.md`.
+> ## ⚠️ Pricing and availability for this market are NOT verified
+>
+> I could not reach this market's data. The Shopify connector authorises **one
+> store at a time** and is currently connected to the UK; switching revokes that
+> access and needs an interactive login that could not be completed. All five
+> regional websites are blocked by this environment's network policy.
+>
+> So the prices, stock and product list below are **absent, not summarised** — and
+> **UK figures must never be reused here.** A UK price shown to a customer in this
+> market is the exact error the country-separation rule exists to prevent.
+>
+> Until this is filled in, price, delivery and availability questions from this
+> market **escalate**. What follows is only what Paddock Blade's own global
+> documents state, with each item's source named.
 
-## Pricing
+## What the global documents say about this market
 
-| Product | Price (EUR) | Tax shown? |
-| --- | --- | --- |
-| Paddock blade — per model | > **TODO(jake):** one row per model, using the exact store name | > **TODO(jake):** is the displayed price VAT-inclusive or exclusive? |
-| Horse solarium | > **TODO(jake):** | |
-| e-Barrow | > **TODO(jake):** | |
-| Tack lockers | > **TODO(jake):** per size | |
-| Spare parts | > **TODO(jake):** or a pointer to where a customer sees part prices | |
+Business Bible §11.5 names the Europe focus as: **Original Paddock Blade, Paddock
+Blade Pro, Tack Lockers.** It describes Europe as a **selective-market rollout
+rather than a full-range replica of the UK business**, run through the Netherlands,
+with multi-language localisation and careful sequencing as priorities.
 
-> **TODO(jake):** the store URL for this market, so replies can point customers to
-> the right one. Sending a Europe customer to the wrong store is a common own goal —
-> they see the wrong currency and often the wrong shipping.
+The "selective rollout" point matters commercially: a European customer asking
+about a product they saw on the UK site may be asking about something not sold to
+them. Check rather than assume, and escalate if unsure.
 
-Never convert from another market's price. Rates move, and a quoted conversion
-reads as a promise.
+## Product specifications
 
-## Shipping
+The Original Paddock Blade's specifications in `original-paddock-blade.md` are
+**not market-specific** and apply here: weight, towing requirements, speed,
+surfaces, capacity, warranty terms, troubleshooting. Those were safe to record
+globally because the FAQ states them globally.
 
-| Field | Value |
-| --- | --- |
-| Delivery time | > **TODO(jake):** working days, and say whether that is dispatch-to-door or order-to-door |
-| Shipping cost | > **TODO(jake):** including any free-shipping threshold |
-| Areas served / surcharges | > **TODO(jake):** Which countries are actually served, and whether shipping differs by country or zone. Ireland is often quoted separately. |
-| Carrier and tracking | > **TODO(jake):** who delivers, whether tracking is provided |
-| Larger items | > **TODO(jake):** do solarium / e-Barrow / lockers ship differently from blades? Kerbside or to-door? |
-| Current lead time | > **TODO(jake):** if any line is made to order or on backorder, note it — this changes the answer and goes stale, so it needs reviewing rather than being written once |
+What is **not** safe to carry across markets: price, delivery, stock, availability,
+product naming, and country of manufacture.
+
+## Payment
+
+> **TODO(jake):** not documented for Europe. Which methods, and is Klarna available as it is in the UK?
+
+*Source: not documented.*
+
+## Delivery
+
+> **TODO(jake):** no delivery information for this market exists in any source
+> available here. Free-shipping thresholds, lead times, carriers, and which areas
+> carry a surcharge are all unknown.
 
 ## Warranty and returns
 
-| Field | Value |
-| --- | --- |
-| Warranty length | > **TODO(jake):** per product line, if they differ |
-| What it covers | > **TODO(jake):** and what it excludes — wear parts, misuse, commercial use |
-| How to claim | > **TODO(jake):** the process a customer follows |
-| Returns window | > **TODO(jake):** |
-| Return shipping | > **TODO(jake):** who pays, and whether that differs for a faulty item versus a change of mind |
-| Statutory rights | EU Consumer Rights Directive, including the 14-day right of withdrawal. Rules are implemented per member state, so details vary. |
+- Warranty: the 10-year position in `original-paddock-blade.md` is stated globally
+  and applies. Warranty questions still escalate.
+- Returns policy: > **TODO(jake):** not documented. The FAQ lists US, AU and UK refund URLs only.
+- Statutory rights: EU Consumer Rights Directive, including the 14-day right of withdrawal, implemented per member state so details vary.
 
-> **A reminder.** Warranty and refund questions match `escalation-rules` rules 3
-> and 7 and escalate regardless of what is written here. This section exists so
-> Jake has the facts to hand and so drafts can be accurate — not so a warranty
-> question can be answered without him. Consumer law differs enough between these
-> five markets that a statement correct in one is wrong in another.
+## Links
 
-## Anything specific to this market
+- Paddock Cleaning Calculator: > **TODO(jake):** not documented for the .nl store.
+- Store: https://paddockblade.nl
 
-> **TODO(jake):** anything a Europe customer asks that customers elsewhere do not —
-> local regulations, voltage and plug type for the solarium, import duty, seasonal
-> demand, terminology quirks. Worth adding to as patterns show up in the digests.
+## Two routes into Europe, and they conflict
+
+There appear to be **two** ways a European customer can buy, and the sources do not
+reconcile them:
+
+1. The **`.nl` store**, per the FAQ's store list and Business Bible §11.5.
+2. **From the UK on a quote** — the UK FAQ says *"We deliver regularly to Ireland,
+   Northern Ireland and all other parts of Europe; for a delivery price to these
+   areas please contact us at hello@paddockblade.co.uk with your full address."*
+
+> **TODO(jake):** which route should a European customer be given? This is the most
+> consequential open question in this file — sending a German customer to the UK for
+> a freight quote when the `.nl` store would have served them, or the reverse, is a
+> lost sale either way. Until resolved, ask which country they are in and escalate.
+
+## Ireland
+
+Ireland is doubly ambiguous — named in the UK FAQ's quote-on-request list, inside
+the EU, and English-speaking. Use the comma-thousands currency form (`€1,234.56`)
+for Ireland; much of the eurozone uses `€1.234,56`.
+
+## Languages
+
+Business Bible §11.5 makes multi-language localisation a priority.
+
+> **TODO(jake):** which languages are supported for customer replies, and should
+> non-English enquiries be answered in-language or escalated? Until decided,
+> escalate anything not in English — a machine-translated reply carrying a warranty
+> or freight commitment is a bad way to find out the translation was wrong.

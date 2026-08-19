@@ -1,63 +1,85 @@
 # United States — USD ($)
 
-Region file for `pb-product-facts`. Read this one when the customer is in
-the United States; do not generalise from another market.
-
+- **Store:** paddockblade.com
 - **Currency:** USD, written `$`
 - **Language:** **American English** — the one market that is not British English
-- **Tax:** sales tax
+- **Tax:** Sales tax, normally added at checkout rather than shown in the price
 
-> **Every figure below is a `TODO(jake):` placeholder.** Until filled in, questions
-> about price, delivery or warranty for this market escalate. See the rule in
-> `../SKILL.md`.
+> ## ⚠️ Pricing and availability for this market are NOT verified
+>
+> I could not reach this market's data. The Shopify connector authorises **one
+> store at a time** and is currently connected to the UK; switching revokes that
+> access and needs an interactive login that could not be completed. All five
+> regional websites are blocked by this environment's network policy.
+>
+> So the prices, stock and product list below are **absent, not summarised** — and
+> **UK figures must never be reused here.** A UK price shown to a customer in this
+> market is the exact error the country-separation rule exists to prevent.
+>
+> Until this is filled in, price, delivery and availability questions from this
+> market **escalate**. What follows is only what Paddock Blade's own global
+> documents state, with each item's source named.
 
-## Pricing
+## What the global documents say about this market
 
-| Product | Price (USD) | Tax shown? |
-| --- | --- | --- |
-| Paddock blade — per model | > **TODO(jake):** one row per model, using the exact store name | > **TODO(jake):** is the displayed price sales tax-inclusive or exclusive? |
-| Horse solarium | > **TODO(jake):** | |
-| e-Barrow | > **TODO(jake):** | |
-| Tack lockers | > **TODO(jake):** per size | |
-| Spare parts | > **TODO(jake):** or a pointer to where a customer sees part prices | |
+Business Bible §11.2 names the US focus as: **Original Paddock Blade, Paddock
+Blade Pro, Aurora solariums, Show Tack Trunks.** It describes the US as the largest
+scale-up opportunity outside the UK, with emphasis on hero-SKU dominance and Pro
+adoption in rough-terrain and ranch-style use.
 
-> **TODO(jake):** the store URL for this market, so replies can point customers to
-> the right one. Sending a United States customer to the wrong store is a common own goal —
-> they see the wrong currency and often the wrong shipping.
+Treat that as *strategic intent*, not a live catalogue. The Bible itself warns
+availability must be checked against the current regional SKU matrix.
 
-Never convert from another market's price. Rates move, and a quoted conversion
-reads as a promise.
+## Product specifications
 
-## Shipping
+The Original Paddock Blade's specifications in `original-paddock-blade.md` are
+**not market-specific** and apply here: weight, towing requirements, speed,
+surfaces, capacity, warranty terms, troubleshooting. Those were safe to record
+globally because the FAQ states them globally.
 
-| Field | Value |
-| --- | --- |
-| Delivery time | > **TODO(jake):** working days, and say whether that is dispatch-to-door or order-to-door |
-| Shipping cost | > **TODO(jake):** including any free-shipping threshold |
-| Areas served / surcharges | > **TODO(jake):** Contiguous 48 states, and note whether Alaska and Hawaii differ. Freight for larger items often differs from parcel shipping. |
-| Carrier and tracking | > **TODO(jake):** who delivers, whether tracking is provided |
-| Larger items | > **TODO(jake):** do solarium / e-Barrow / lockers ship differently from blades? Kerbside or to-door? |
-| Current lead time | > **TODO(jake):** if any line is made to order or on backorder, note it — this changes the answer and goes stale, so it needs reviewing rather than being written once |
+What is **not** safe to carry across markets: price, delivery, stock, availability,
+product naming, and country of manufacture.
+
+## Payment
+
+All major credit and debit cards, bank transfer, **Shop Pay**.
+
+Shop Pay Installments detail: https://help.shopify.com/en/manual/payments/shop-pay-installments
+
+*Source: FAQ, payment plans row.*
+
+## Delivery
+
+> **TODO(jake):** no delivery information for this market exists in any source
+> available here. Free-shipping thresholds, lead times, carriers, and which areas
+> carry a surcharge are all unknown.
 
 ## Warranty and returns
 
-| Field | Value |
-| --- | --- |
-| Warranty length | > **TODO(jake):** per product line, if they differ |
-| What it covers | > **TODO(jake):** and what it excludes — wear parts, misuse, commercial use |
-| How to claim | > **TODO(jake):** the process a customer follows |
-| Returns window | > **TODO(jake):** |
-| Return shipping | > **TODO(jake):** who pays, and whether that differs for a faulty item versus a change of mind |
-| Statutory rights | State-level consumer protection plus the FTC cooling-off rule. Sales tax is normally added at checkout rather than shown in the price. |
+- Warranty: the 10-year position in `original-paddock-blade.md` is stated globally
+  and applies. Warranty questions still escalate.
+- Returns policy: https://paddockblade.com/pages/refund-policy
+- Statutory rights: State-level consumer protection plus the FTC cooling-off rule.
 
-> **A reminder.** Warranty and refund questions match `escalation-rules` rules 3
-> and 7 and escalate regardless of what is written here. This section exists so
-> Jake has the facts to hand and so drafts can be accurate — not so a warranty
-> question can be answered without him. Consumer law differs enough between these
-> five markets that a statement correct in one is wrong in another.
+## Links
 
-## Anything specific to this market
+- Paddock Cleaning Calculator: https://paddockblade.com/pages/paddock-cleaning-calculator
+- Store: https://paddockblade.com
 
-> **TODO(jake):** anything a United States customer asks that customers elsewhere do not —
-> local regulations, voltage and plug type for the solarium, import duty, seasonal
-> demand, terminology quirks. Worth adding to as patterns show up in the digests.
+## Market-specific wording
+
+The FAQ's cost-justification answer for this market says **"American made"** and
+speaks of supporting local economy, industry and jobs, and using fully tracked and
+insured couriers. It cites a **10 year warranty** — consistent with the global
+position that "lifetime" means 10 years.
+
+Use "American made" here rather than the UK's "British Made". Do not state a
+country of manufacture for any *other* product line without confirming it.
+
+## Units and spelling
+
+Feet, inches and pounds. The blade is **100 lb**; trailer-mode capacity is
+**1,100 lb**. See `original-paddock-blade.md`, which gives both unit systems.
+
+Use "pasture" and "turnout" rather than "paddock", and "barn" rather than "yard" —
+see `pb-brand-voice`.

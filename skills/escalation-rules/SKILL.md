@@ -34,6 +34,29 @@ call `meta_reply_to_comment` or `meta_send_message`, with or without
 | 8 | **Competitor comparisons** — "is this better than X", or a competitor named at all | Comparative claims carry advertising-standards risk, and a careless one is a gift to a competitor. |
 | 9 | **Press, partnership, sponsorship, affiliate and influencer enquiries** | Commercial decisions with long tails. Jake's call, always. |
 | 10 | **Ambiguity you cannot resolve** | If you are unsure which rule applies, or unsure what the customer is actually asking, that uncertainty *is* the trigger. |
+| 11 | **Internal-only facts** — steel gauge of the blade, or anything about an unreleased product | Paddock Blade's own FAQ marks these do-not-disclose. See `pb-product-facts › internal-only`. Answer around it, then escalate. |
+| 12 | **Unconfirmed surface types** — woodchip, track systems, or any surface not on the verified list | The FAQ's standing instruction is to obtain photos or video and refer to Jake **every time**. Never judge a surface from a description. |
+
+### Rule 12 is a standing company instruction, not a judgement call
+
+The FAQ is explicit: for irregular surfaces the answer *"is always get photos and
+videos first to confirm what the surface type is and refer to Jake."* This one is
+not yours to assess, however confident the description sounds — the difference
+between a woodchip track that works and one that beds in is visual.
+
+Ask for photos or a short video, say you want to check it properly before advising,
+and escalate with the media attached. Customers respond well to this; it reads as
+care rather than evasion.
+
+### Sand enquiries: answer, then tag
+
+A sand question is not an escalation on its own — there is a verified answer (not
+suitable for sand, sandy soil, soft loam, ménages or sand/fibre arenas; *can* be
+used in reverse/trailer mode to level them). Give it.
+
+What you must not do is hint that anything is in development. Tag the enquiry
+**`sandblade`** in your notes so Jake can see the demand accumulating. See
+`pb-product-facts › internal-only`.
 
 ## How to recognise a match
 
@@ -55,6 +78,38 @@ the widest one and can you do anything on price?" contains a product question an
 rule 1. **The escalating part governs the whole message.** Never split a reply so
 the safe half goes out publicly and the risky half waits; the customer sees a
 partial answer and reads the silence as evasion.
+
+## Who to escalate to
+
+Paddock Blade already has an approval framework (Business Bible §30), and this
+skill should route into it rather than sending everything to one person. The
+mapping:
+
+| Their tier | Approver | What lands here |
+| --- | --- | --- |
+| **Green** — research, drafting, reporting, monitoring | No approval needed | Classifying comments, writing drafts, building the queue, digests |
+| **Amber** — customer communications | **Emalee** (Operations Director) | Ordinary comment and DM replies. Every send in this system is at least Amber. |
+| **Red** — refunds, pricing, legal, IP, product claims | **Jake** | Rules 1–4, 6–9, and 11 |
+| **Critical** | **Jake via Telegram**, plus manual confirmation and logging | Product-claim changes and anything touching credentials or permissions |
+
+Two consequences worth being clear about.
+
+**Every customer reply is Amber at minimum**, so the auto-send whitelist shipping
+empty and disabled is not excess caution — it is what their own framework requires.
+Enabling it would move a class of Amber action to no-approval, which is Jake's
+decision to make explicitly.
+
+**Rule 5, horse injury or safety, goes to Jake**, not Emalee, even though it arrives
+as a customer communication. A welfare claim can become a product-claim or legal
+matter, and those are Red.
+
+The Business Bible also states that Emalee approving *a new category of action not
+previously authorised* must be verified with Jake before execution. So if an
+approval would set a precedent rather than apply an existing one, treat it as Red.
+
+Telegram is their designated highest-trust approval channel, which is why the runner
+delivers the queue there. A Telegram approval from Jake is the strongest signal
+available; a WhatsApp or email approval is not equivalent for a Red action.
 
 ## What to do instead
 

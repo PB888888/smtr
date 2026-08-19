@@ -1,121 +1,158 @@
 ---
 name: pb-product-facts
-description: The single source of truth for Paddock Blade product facts — the product range (paddock blades, horse solarium, e-Barrow, tack lockers, spare parts), specifications, per-region pricing and currency, shipping times and warranty terms for the UK, USA, Canada, Australia and Europe. Consult this before making ANY factual claim in a reply to a customer, on any platform. Use whenever answering a question about dimensions, weight, what tows it, compatibility, price, delivery time, warranty or spare parts. If a fact is absent or still marked TODO, that is a signal to escalate rather than estimate.
+description: The single source of truth for Paddock Blade product facts across the UK, USA, Canada, Europe and Australia/New Zealand — product range per market, specifications, dimensions, weight, capacity, towing and vehicle compatibility, materials, warranty, pricing, shipping, assembly, accessories and colours. Consult this before making ANY factual claim to a customer on website chat, Shopify Inbox, social comments or DMs. Use whenever answering anything about what a product does, costs, weighs, tows behind, ships in, or is covered by. Identify the customer's country first — specifications and availability genuinely differ between markets. If a fact is absent or marked TODO, escalate rather than estimate.
 ---
 
 # Paddock Blade product facts
 
-Every factual claim in a customer-facing reply must trace to an entry in this
-skill. If it does not, it is not a fact — it is a guess with the Paddock Blade name
-on it.
+Every factual claim in a customer-facing reply must trace to an entry in this skill.
+If it does not, it is not a fact — it is a guess with the Paddock Blade name on it.
 
-## The rule that matters most
+## Two rules that override the instinct to be helpful
 
-**An absent fact is an escalation, never an estimate.**
+**1. An absent fact is an escalation, never an estimate.**
 
-When the answer to a customer's question is not here, is marked `TODO(jake):`, or
-is here but does not clearly cover the case they asked about, the correct action is
-to tell them you will check and to escalate to Jake. It is not to reason towards a
-plausible figure.
+When the answer is not here, is marked `TODO(jake):`, or is here but does not
+clearly cover the case asked about, tell the customer you will confirm and
+escalate. Do not reason towards a plausible figure.
 
-This is worth being stubborn about, because the pull in the other direction is
-strong. A number that sounds right is always available, the customer is waiting,
-and producing it feels like being helpful. But a specification published under the
-brand name is public, permanent, quotable, and may be the basis of a purchase.
-"Let me get you the exact figure rather than guess" costs a few hours. A wrong
-dimension costs a return, a refund, and a customer who tells their yard about it.
+The pull the other way is strong: a number that sounds right is always available,
+the customer is waiting, and producing it feels like service. But a specification
+published under the brand name is public, permanent, quotable, and may be the basis
+of a £2,000 purchase. "Let me confirm that for you rather than guess" costs hours.
+A wrong dimension costs a return, a refund, and a customer who tells their yard.
 
-**Near-misses count as absent.** If the facts give a figure for the 4ft model and
-the customer asks about the 6ft, or give a UK shipping time and the customer is in
-Alberta, you do not have the fact. Escalate.
+**Near-misses count as absent.** A figure for the Original blade when they asked
+about the Pro, or a UK shipping time when they are in Alberta, is not the fact.
 
-## Status of this file
+**2. Never carry a fact from one country to another.**
 
-> **This skill is a structure awaiting content.** Every product specification,
-> price, shipping time and warranty term below is a `TODO(jake):` placeholder,
-> because inventing them was not an option and no source for them was available
-> when this was written.
->
-> Until they are filled in, expect nearly every product question to escalate.
-> That is the system behaving correctly, not failing — but it does mean filling
-> this in is the highest-value thing Jake can do to make the whole system useful.
->
-> Suggested order: the paddock blade range first (it will be the bulk of
-> questions), then UK shipping and warranty, then the other regions.
+The range, naming, pricing, availability and shipping genuinely differ per market.
+A UK price quoted to a US customer is not a small error — it is the specific
+mistake the country separation exists to prevent, and it is the one most likely to
+happen, because the UK file is the fullest and it is right there.
+
+Specifications that the FAQ states **globally** — weight, towing, speed, surfaces,
+capacity, warranty terms — are safe across markets and live in
+`references/original-paddock-blade.md`. Everything else is per-market.
+
+## Identify the country first
+
+Before giving country-specific information, establish the market. Use the store or
+Page they contacted through, the currency they quote, or what they say about their
+location. **Never infer it from their name.**
+
+If it is obvious from context, do not ask again — that is irritating and looks
+inattentive. If it is unclear **and it materially affects the answer**, ask simply:
+
+> "Of course — which country are you based in?"
+
+If it is unclear and it does **not** affect the answer — how to empty the blade,
+what it tows behind, whether it damages grass — just answer. Asking unnecessarily
+is friction for no gain.
+
+Where a customer needs a different store, point them at the right regional one. If
+their country is unclear or they need the full set, the Paddock Blade Linktree
+carries links to all regional stores.
+
+> **TODO(jake):** the Linktree URL. It is referenced as the fallback for customers
+> whose market is unclear, and it cannot be used until it is recorded here.
+
+## Source priority
+
+When sources disagree, prefer them in this order:
+
+1. The relevant country's **current Shopify store / product data** — live prices,
+   variants, stock
+2. The relevant country's **official Paddock Blade website**
+3. **Paddock Blade FAQ and product documents** (`PB_FAQs.pdf` and its Google Sheet)
+4. **Google Drive documents and spreadsheets**, including the Business Bible
+5. Other verified internal information
+
+Do not guess between conflicting sources. Prefer the most current
+country-specific one, and log the conflict in `references/discrepancies.md` so it
+is resolved once rather than rediscovered.
+
+A caution about source 4: the **Business Bible is a strategy document, not a
+catalogue.** Its per-market category lists describe intent, and it says so itself —
+availability "must always be checked against the current regional SKU matrix". Its
+listing a product for a market is not evidence that the product is buyable there.
+
+## Never disclose
+
+Some facts in Paddock Blade's own documents are marked internal — the steel gauge,
+and an unreleased product. **Read `references/internal-only.md` before answering
+anything about steel thickness or about sand surfaces.**
+
+The FAQ's first column is headed "FOR INTERNAL COMPANY OR SUBCONTRACTOR USE".
+Check which column a fact came from before repeating it.
+
+## Where things are
+
+| File | Contents |
+| --- | --- |
+| `references/original-paddock-blade.md` | **Start here for the hero product.** Verified specs, towing, surfaces, warranty, troubleshooting. Cross-market. |
+| `references/uk.md` | **Verified live.** Full 20-product catalogue with real prices, delivery, payment, Klarna. |
+| `references/usa.md` | Unverified pricing. Shop Pay, "American made" wording, imperial units. |
+| `references/canada.md` | Unverified pricing. Made-in-Canada and bilingual questions open. |
+| `references/australia.md` | Unverified pricing. AfterPay/ZipPay. Includes the New Zealand questions. |
+| `references/europe.md` | Unverified pricing. Two conflicting routes to purchase — read before answering. |
+| `references/internal-only.md` | **Do-not-disclose register.** |
+| `references/discrepancies.md` | Conflicts between sources, with the resolution and what to say. |
 
 ## Product range
 
-Five lines. Each needs its own specification block.
+Paddock Blade is no longer a single-product business. Four platforms, per the
+Business Bible:
 
-| Line | What it is | Detail |
-| --- | --- | --- |
-| **Paddock blades** | The core product | > **TODO(jake):** one-sentence description of what it is and does, and how it is towed. List every model/size currently sold, with the exact name used on the store. |
-| **Horse solarium** | | > **TODO(jake):** description, models, power requirements, mounting options. |
-| **e-Barrow** | | > **TODO(jake):** description, capacity, battery and range figures, charge time. |
-| **Tack lockers** | | > **TODO(jake):** description, sizes, materials, locking, indoor/outdoor suitability. |
-| **Spare parts** | | > **TODO(jake):** parts available, which models each fits, how a customer orders one. |
-
-### Paddock blade specifications
-
-The table customers ask about most. One row per model.
-
-| Field | Value |
+| Platform | Products |
 | --- | --- |
-| Model name(s) | > **TODO(jake):** exact names as they appear on the store |
-| Working width | > **TODO(jake):** per model, metric and imperial |
-| Overall dimensions | > **TODO(jake):** per model |
-| Weight | > **TODO(jake):** per model — asked about constantly, as it determines what can tow it |
-| Towing requirement | > **TODO(jake):** minimum vehicle; does it work behind a quad/ATV, ride-on mower, compact tractor, UTV? Hitch type? |
-| Coverage per pass / recommended paddock size | > **TODO(jake):** what customers actually want to know — "will this suit my 3 acres?" |
-| Surface suitability | > **TODO(jake):** grass, sand, all-weather, wet ground, frozen ground, slopes |
-| Materials and finish | > **TODO(jake):** including corrosion resistance, which matters for outdoor storage |
-| Assembly required | > **TODO(jake):** flat-packed or assembled, tools needed, time |
-| Storage footprint | > **TODO(jake):** folded/stored dimensions |
-| Safety notes around horses | > **TODO(jake):** anything that must be said. See the caution below. |
+| **Core cleaning** | Original Paddock Blade (hero) · Paddock Blade Pro |
+| **Storage and show-yard** | Tack Lockers · Show Tack Trunks · Rug Boxes · Rug Trunks |
+| **Care, conditioning and welfare** | Aurora horse solariums · Rug dryers · PEMF therapy · Vibration therapy |
+| **Utility, feeding and yard mobility** | e-Barrow · Round pens · Tie posts · Water drinkers · Hay OptiMizer slow feeders |
 
-> **A caution on the safety row.** `escalation-rules` rule 5 means any question
-> touching horse injury or safety escalates regardless of what this file says. Fill
-> this row in for Jake's own reference and for drafting, but a safety question is
-> never answered from a lookup table alone.
+**Which of these a given customer can actually buy depends on their market.** Only
+the UK range is confirmed here.
 
-### Horse solarium, e-Barrow, tack lockers
+### Paddock Blade Pro
 
-> **TODO(jake):** replicate the specification table above for each of these three
-> lines. Their fields differ — the solarium needs power draw, mounting and timer
-> details; the e-Barrow needs battery, range, load capacity and charge time; the
-> tack lockers need dimensions, capacity, materials and weatherproofing. Better to
-> have three accurate short tables than one generic long one.
+The premium heavy-duty version of the core blade. Per the Business Bible it is for
+rougher ground, larger properties, longer grass, rocks, flint, granite, and
+professional or higher-frequency use.
 
-## Regional information
+> **TODO(jake): the Pro has no documented specifications anywhere.** The FAQ has a
+> "PADDOCK BLADE PRO" section heading with every row blank. So there is no verified
+> answer to what the Pro weighs, how big it is, how it differs in construction, or
+> what it tows behind.
+>
+> This is the **highest-value gap in the whole knowledge base.** The Pro is a global
+> priority product at £769 in the UK — a 60% step up from the Original — and the
+> obvious customer question is "what do I get for the extra?" Right now every such
+> question escalates.
+>
+> Needed: weight, dimensions, working width, construction differences, minimum
+> vehicle and power, and a plain statement of when to recommend Pro over Original.
 
-Pricing, shipping, warranty and tax are all region-specific, and answering with
-another region's figures is a common and expensive mistake. One file per market:
+Until then: describe the Pro's *purpose* from the Business Bible positioning, which
+is safe, and escalate any request for figures or a direct comparison.
 
-| Market | File | Currency |
-| --- | --- | --- |
-| United Kingdom | `references/uk.md` | GBP `£` |
-| United States | `references/usa.md` | USD `$` |
-| Canada | `references/canada.md` | CAD `CA$` |
-| Australia | `references/australia.md` | AUD `A$` |
-| Europe | `references/europe.md` | EUR `€` |
+## Citing a fact
 
-**Read the file for the customer's market. Do not generalise from another.**
+When drafting, name what the draft rests on, as
+`pb-product-facts › [file] › [section]` — for example
+`pb-product-facts › original-paddock-blade › towing` or
+`pb-product-facts › uk › delivery`.
 
-Determining the market: the store or Page they came through, what they say about
-their location, or the currency they quote. **Not their name.** If you cannot
-tell, and the answer depends on it, ask or state your assumption — see
-`pb-brand-voice`.
+This makes an ungrounded claim visible. If you cannot name the entry a sentence
+rests on, that sentence is invented, and you have found the problem before the
+customer did.
 
-Customers outside these five markets are an escalation. There may be no shipping
-route, and inventing one would be worse than saying you will check.
+## Freshness
 
-## How to cite a fact
+The UK catalogue was read live on **2026-08-17**. Prices, stock and product lists
+change — treat that file as a cache. Stock figures go stale within days, and three
+UK lines were in single digits when checked.
 
-When drafting, name the entries the draft relies on, as
-`pb-product-facts › [section]` — for example
-`pb-product-facts › paddock blade specifications › weight` and
-`pb-product-facts › UK › shipping`.
-
-This is not bureaucracy. It makes an ungrounded claim visible: if you cannot name
-the entry a sentence rests on, that sentence is invented, and you have found the
-problem before the customer did.
+If a price or availability is decisive to a customer's decision, re-read the live
+store rather than trusting this file.

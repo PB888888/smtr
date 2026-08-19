@@ -24,9 +24,14 @@ first.
    `unanswered_only: true` filters most of this, but it only inspects the first 10
    replies and says so in its `note` field when it hits that limit.
 3. **Classify** into exactly one of the six categories below.
-4. **Ground every factual claim in `pb-product-facts`.** If the fact is not there,
+4. **Establish the customer's market before giving country-specific information.**
+   Price, delivery and availability differ per market, and the UK is the only market
+   verified in `pb-product-facts`. If the market is unclear and the answer depends on
+   it, ask; if it does not depend on it, just answer.
+5. **Ground every factual claim in `pb-product-facts`.** If the fact is not there,
    the category becomes *product question with a missing fact*, which escalates.
-5. **Draft in the register `pb-brand-voice` sets for that market.**
+   Check `internal-only.md` before answering on steel thickness or sand surfaces.
+6. **Draft in the register `pb-brand-voice` sets for that market.**
 
 ## The six categories
 
